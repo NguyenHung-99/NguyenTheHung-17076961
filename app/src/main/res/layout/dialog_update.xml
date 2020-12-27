@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="#ECBFBF"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/update_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:hint="Enter Name"
+        android:lines="4"
+        android:padding="12dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/update_tuoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:hint="Enter Age"
+        android:lines="4"
+        android:padding="12dp">
+
+    </EditText>
+
+    <Spinner
+        android:id="@+id/snp_gioiTinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Update">
+
+    </Button>
+
+</LinearLayout>
