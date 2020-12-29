@@ -13,20 +13,8 @@
         android:id="@+id/search_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Person Name"
+        android:hint="Enter text"
         android:padding="12dp"></EditText>
-
-    <EditText
-        android:id="@+id/edt_tuoi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Person Age"
-        android:padding="12dp"></EditText>
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,18 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#105C98"
-            android:text="Add">
-
-        </Button>
-
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:background="#E11717"
-            android:text="Delete All Person">
+            android:text="Search">
 
         </Button>
 
@@ -62,7 +39,18 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="#501515"
-            android:text="Search">
+            android:text="ALL Person">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_goHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#501515"
+            android:text="Home">
 
         </Button>
 

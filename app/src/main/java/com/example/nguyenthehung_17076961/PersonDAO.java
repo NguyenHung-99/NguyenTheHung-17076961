@@ -21,6 +21,9 @@ public interface PersonDAO {
     @Delete
     void delAllPerson(List<Person> personList);
 
+    @Query("Select * from person Where name = :name")
+    List<Person> getByName(String name);
+
     //Updata query
     @Query("UPDATE person SET name = :name , tuoi = :tuoi , gioiTinh = :gioiTinh WHERE id = :id")
     void update(int id, String name, int tuoi, String gioiTinh);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -18,7 +19,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
     EditText edt_name, edt_tuoi;
-    Button btAdd, btReset;
+    Button btAdd, btReset, btSearch;
     RecyclerView recyclerView;
     List<Person> personList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
@@ -30,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edt_name = findViewById(R.id.edt_name);
+        edt_name = findViewById(R.id.search_name);
         edt_tuoi = findViewById(R.id.edt_tuoi);
-        btAdd = findViewById(R.id.bt_add);
+        btAdd = findViewById(R.id.bt_search);
         btReset = findViewById(R.id.btn_reset);
+        btSearch = findViewById(R.id.btn_getAll);
         recyclerView = findViewById(R.id.recycler_view);
 
         //set value spinner
@@ -97,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
                 personList.addAll(database.personDAO().getAll());
                 adapter.notifyDataSetChanged();
 
+            }
+        });
+        btSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, SearchActivity.class);
+                MainActivity.this.startActivity(myIntent);
             }
         });
     }
